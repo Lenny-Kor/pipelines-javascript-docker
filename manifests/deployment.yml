@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lennykorpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lennykorpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: lennykorpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: lennykorpipelinesjavascriptdocker 
+          image: mycontainerregistrylenny.azurecr.io/lennykorpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
